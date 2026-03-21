@@ -1,0 +1,22 @@
+# Nmap 7.98 scan initiated Thu Mar 19 16:26:41 2026 as: /usr/lib/nmap/nmap --privileged -vvv -p 22,80 -4 -sC -sV -vv -oA output/guardian 10.129.6.179
+Nmap scan report for 10.129.6.179
+Host is up, received echo-reply ttl 63 (0.056s latency).
+Scanned at 2026-03-19 16:26:41 WAT for 9s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 9c:69:53:e1:38:3b:de:cd:42:0a:c8:6b:f8:95:b3:62 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEtPLvoTptmr4MsrtI0K/4A73jlDROsZk5pUpkv1rb2VUfEDKmiArBppPYZhUo+Fopcqr4j90edXV+4Usda76kI=
+|   256 3c:aa:b9:be:17:2d:5e:99:cc:ff:e1:91:90:38:b7:39 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHTkehIuVT04tJc00jcFVYdmQYDY3RuiImpFenWc9Yi6
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.52
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+|_http-title: Did not follow redirect to http://guardian.htb/
+Service Info: Host: _default_; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 19 16:26:50 2026 -- 1 IP address (1 host up) scanned in 9.52 seconds
